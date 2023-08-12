@@ -1,11 +1,22 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const existingNumbers = {};
+
+  for (const number of array) {
+    const totality = target - number;
+    if (totality in existingNumbers) return true;
+    existingNumbers[number] = true;
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
-
+function findSock(object) {
+  if (object.sock) return "sock";
+}
 /* 
   Add your pseudocode here
 */
